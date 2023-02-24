@@ -1,0 +1,275 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monsserat;
+}
+body
+{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #7d2ae8;
+  padding: 30px;
+  boarder: 1px solid black;
+  margin:0;
+  width:100vw;
+  height:100vh;
+}
+.container
+{
+  position: relative;
+  right:200px;
+  height: 500px;
+  width: 500px;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  perspective: 2700px;
+  margin:0 200px;
+}
+.container .cover{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 500px;
+  width: 500px;
+  z-index: 98;
+  transition: all 1.5s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+.container .cover::before,
+.container .cover::after
+{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #7d2ae8;
+  opacity: 0.5;
+  z-index: 12;
+}
+.container .cover::after
+{
+  opacity: 0.3;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.container .cover img
+{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+.container .cover .text
+{
+  position: absolute;
+  z-index: 130;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cover .text .text-1,
+.cover .text .text-2
+{
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+.cover .text .text-2
+{
+  font-size: 15px;
+  font-weight: 500;
+}
+.container .forms
+{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.container .form-content
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-content .signup-form,
+.form-content .signup-form
+{
+  width: calc(100% / 2 - 25px);
+}
+.forms .form-content .title
+{
+  position: relative;
+  font-size: 40px;
+  font-weight: 500;
+  color: #333;
+}
+.forms .form-content .title /*Signup Now text*/
+{
+  position: relative;
+  left: 100px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 50px 0;
+}
+.forms .form-content .title:before/*line under signup now*/
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #7d2ae8;
+}
+.forms .form-content .title:before
+{
+  width: 206px;
+}
+.forms .form-content .input-box
+{
+  margin-top: 310px;
+}
+.forms .form-content .input-box
+{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  margin: 20px 0;
+  position: center;
+}
+.signup-form .signup
+{
+  position: center;
+}
+.form-content .input-box input
+{
+  height: 100vh;
+  width: 100vw;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.form-content .input-box input:focus,
+.form-content .input-box input:valid
+{
+  border-color: #7d2ae8;
+}
+.form-content .input-box i
+{
+  position: absolute;
+  color: #7d2ae8;
+  font-size: 17px;
+}
+.form-content .input-box.text
+{
+  font-size: 20px;
+  font-weight: 500px;
+  color: #333;
+}
+.forms .form-content .text a
+{
+  text-decoration: none;
+}
+.forms .form-content .text a:hover
+{
+  text-decoration: underline;
+}
+.forms .form-content .butnn
+{
+  color: blue;
+  margin-top: 40px;
+}
+.forms .form-content .butnn input
+{
+  color: #fff;
+  background: #7d2ae8;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.forms .form-content .butnn input:hover
+{
+  background: red;
+}
+.forms .form-content label
+{
+  color: #5b13b9;
+  cursor: pointer;
+}
+.forms .form-content label:hover
+{
+  text-decoration: underline;
+}
+.forms .form-content .login-form,
+.forms .form-content .sign-up-text
+{
+  text-align: center;
+  margin-top: 50px;
+}
+form .butnn input
+{
+   position: relative;
+   left:100px;
+   height: 50px;
+   width: 219px;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   margin:35px 0px 50px 0;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .butnn input:hover
+{
+  transform: scale(0.99);
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+.container #flip
+{
+  display: none;
+}
+@media (max-width: 730px) 
+{
+  .container .cover
+  {
+    display: none;
+  }
+  .form-content .signup-form
+  {
+    width: 100px;
+  }
+  .form-content .signup-form
+  {
+    display: none;
+  }
+  .container #flip:checked ~ .forms .signup-form
+  {
+    display: block;
+  }
+  .footer h5
+  {
+  margin:500px 0 20px 10px;
+  }
+}

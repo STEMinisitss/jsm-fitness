@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <meta name = "veiwport" content="width=device-width,initial-scale=1.0">
+</head>
+  <body>
+    <div class = "center">
+      <h1>Account login</h1>
+      <form method="post">
+        <div class = "txt_field">
+          <input type = "usr" id="user" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+      <form>
+        <div class = "txt_field">
+          <input type = "password" id="pass" required minlength=8 >
+          <span></span>
+          <label>Password (minimum of 8 characters)</label>
+        </div>
+        <div class="pass">
+          <label for=""><input type="checkbox" value="lsRememberMe" id="rememberMe">Remember Me</label><br><br>
+
+          <a href ="forgot_password.html">Forgot Password?</a></div>
+        <div class="button">
+        <input type= "submit" value="Login" onclick="checkData() lsRememberMe()"></div>
+
+        <div class = "signup">Not a member? 
+          <a href="register.html">Signup</a></div>
+      </form>
+      
+    </div>
+       <script src="login.js"></script>  
+  </body>
+    </html>
+
+  
+</body>
+</html>
